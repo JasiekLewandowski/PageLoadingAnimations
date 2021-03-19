@@ -1,0 +1,217 @@
+body {
+  min-height: 100%;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+#myEffectsCarousel {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel-inner {
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------ ANIMATION 1 ------------------------------------------------------ */
+
+.animation-1 {
+  background-color: #0a043c;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-1 .bigSquare {
+  height: 50px;
+  width: 50px;
+  border: 7px solid white;
+  /* box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white; */
+  animation: bigSquareAnimation 3s infinite;
+  animation-timing-function: ease;
+}
+
+.animation-1 .smallSquare {
+  height: 25px;
+  width: 25px;
+  margin: 20px;
+  border: 3.5px solid white;
+  /* box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white; */
+  animation: smallSquareAnimation 3s infinite;
+  animation-timing-function: ease;
+  animation-delay: -1.5s;
+}
+
+@keyframes smallSquareAnimation {
+  0% {width:25px; transform: rotate(0deg);}
+  50% {width:50px; height: 50px; border:7px solid white; transform: rotate(540deg); box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white;}
+  100% {width:25px; height: 25px; transform: rotate(1080deg);}
+}
+
+@keyframes bigSquareAnimation{
+  0% {width:50px; transform: rotate(0deg); box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white;}
+  50% {width:100px; height: 100px; border:15px solid white; transform: rotate(540deg); box-shadow: none; }
+  100% {width:50px; height: 50px; transform: rotate(1080deg); box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white;}
+}
+
+
+/* ------------------------------------------------------ ANIMATION 2 ------------------------------------------------------ */
+
+.animation-2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animation-2 div {
+  width: 20px;
+  height: 50px;
+  margin-left: 15px;
+  background: #f0c929;
+  box-shadow: 0 0 10px #f0c929, 0 0 40px #f0c929, 0 0 80px #f0c929;
+  animation: myAnimation 2s infinite;
+  animation-timing-function: ease;
+}
+
+.animation-2 div:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.animation-2 div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.animation-2 .smallOne {
+  width: 20px;
+  height: 30px;
+  margin-left: 15px;
+  background: #f0c929;
+  animation: mySmallAnimation 2s infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes myAnimation {
+  0% {height: 50px;}
+  50% {height: 90px;}
+  100% {height: 50px;}
+}
+
+@keyframes mySmallAnimation {
+  0% {height: 30px;}
+  50% {height: 50px;}
+  100% {height: 30px;}
+}
+
+
+/*------------------------------------------------ ANIMATION 3  ------------------------------------------------------*/
+
+.animation-3 {
+  background-color: #0a043c;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-3 .bigRocket {
+  position: relative;
+  left: 18px;
+  margin: 20px;
+  height: 50px;
+  animation: bigRocketLaunch 6s infinite;
+  animation-timing-function: ease;
+}
+
+.animation-3 .smallRocket {
+  position: relative;
+  left: 18px;
+  height: 30px;
+  animation: smallRocketLaunch 6s infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes smallRocketLaunch {
+  0% {top: 1000px; left: 18px;}
+  25% {top: 1000px; left: 18px;}
+  50% {top: 1000px; left: 18px;}
+  75% {top: 100px; left: 45px;}
+  100% {top: -1000px; }
+}
+
+
+@keyframes bigRocketLaunch {
+  0% {top: 1000px; left: 18px;}
+  25% {top: 100px; left: 40px;}
+  50% {top: 100px; left: 18px;}
+  75% {top: 80px; left: 50px;}
+  100% {top: -1000px; }
+}
+
+.animation-3 .meteor {
+  position: relative;
+  right: 62px;
+  bottom: 100px;
+  height: 35px;
+  animation: meteor 6s infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes meteor {
+  0% {bottom: 1000px;}
+  53% {opacity: 100%;}
+  55% {bottom: 60px; opacity: 0%; }
+  100% {opacity: 0%; bottom: 100px;}
+}
+
+.animation-3 .laser {
+  width: 2px;
+  height: 7px;
+  background: white;
+  box-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white;
+  position: relative;
+  right: 80px;
+  top: 81px;
+  animation: shoot 6s infinite;
+}
+
+@keyframes shoot {
+  0% {opacity: 0%; top: 81px;}
+  49% {opacity: 0%; top: 81px;}
+  50% {opacity: 100%; top: 81px;}
+  53% {opacity: 100%; top: -60px;}
+  54% {opacity: 0%;}
+  100% {opacity: 0%;}
+}
+
+.animation-3 .explosion{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white;
+  position: relative;
+  right: 95px;
+  bottom: 62px;
+  animation: explode 6s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes explode {
+  0% {opacity: 0%;}
+  53% {opacity: 0%;}
+  55% {opacity: 100%; width: 30px; height: 30px;}
+  80% {opacity: 0%; width: 70px; height: 70px;}
+  100% {opacity: 0%}
+}
