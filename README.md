@@ -1,10 +1,10 @@
 # PageLoadingAnimations
 This repository contains website load animations designed by me. 
 
-# Visualisation
+## Visualisation
 !Coming soon!
   
-# How to open
+## How to open
 
 #### Link
 To open project inside your browser, click on the link below:   
@@ -16,7 +16,7 @@ To open a project on your computer:
 2. Duble click on 'index.html' file to open it inside your browser.  
   
     
-# Technologies
+## Technologies
   
 * HTML
 * CSS
